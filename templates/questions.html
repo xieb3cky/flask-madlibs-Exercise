@@ -1,0 +1,22 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>Madlibs</title>
+</head>
+
+<body>
+    <h1>Madlibs</h1>
+    <form action="/story">
+        <!--iterate through prompt list 
+        and creates a label and input-->
+        {% for p in prompts %}
+        <label>{{ p }}:
+            <input name="{{ p }}">
+        </label>
+        {% endfor %}
+        <button>Create Story!</button>
+    </form>
+</body>
+
+</html>
